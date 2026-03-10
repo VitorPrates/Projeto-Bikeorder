@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+html
+{
+    width: 100vw;
+    height: 100vh;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 70% 15%;
+    font-family: "inter";
+}
+.default_header,.default_footer
+{
+    width: 100%;
+    // height: 120px;
+    background-color: #0059FF;
+    color: white;
+    font-family: "inter";
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    // text-align: center;
+    h1
+    {
+        width: 100%;
+        text-align: center;
+    }
+}
+.default_footer
+{
+    align-items: end;
+    overflow: hidden;
+    h1
+    {
+        position: absolute;
+    }
+    .login_footer_title
+    {
+        position: relative;
+        bottom: 35%;   
+    }
+    p
+    {
+        color: #00ff5583;
+        position: relative;
+        width: 400px;
+        height: 200px;
+        text-wrap: initial;
+        // background-color: red;
+        left: 100px;
+        transform: rotateZ(20deg);
+        word-break: break-all;
+        overflow: hidden;
+    }
+}
+.default_main
+{
+    display: flex;
+    align-items: center;
+    .botoes_principais
+    {
+        width: 90%;
+        margin: auto;
+        // border: 1px solid;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h3
+        {
+            margin: auto;
+            // border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 2em;
+            font-style: italic;
+            a
+            {
+                color: black;
+                text-decoration: none;
+            }
+        }
+        h3:nth-child(1n)
+        {
+            background-color: #00FF90;
+        }
+        h3:nth-child(2n)
+        {
+            background-color: #F6FF00;
+        }
+        h3:nth-child(3n)
+        {
+            background-color: #FF8383;
+        }
+        h3:nth-child(4n)
+        {
+            background-color: #ffffff;
+            border: 1px solid black;
+        }
+    }
+}
+
+// login css
+.login_main
+{
+    background-color: #0059FF;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .background_animado
+    {
+        // background-color: #000000;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='40' viewBox='0 0 380 50'%3E%3Ctext x='0' y='40' fill='rgba(0,255,0,0.3)' font-family='Arial' font-weight='bold' font-style='italic' font-size='5em'%3EBikOrder%3C/text%3E%3C/svg%3E");
+        background-repeat: repeat;
+        transform: rotate(-20deg) scale(1.5);
+        background-size: 70px 15px;
+        animation: move-bg 15s linear infinite;
+        /* Ajustes de layout */
+        width: 100%;
+        height: 100%;
+        position: relative;
+        // top: 0;
+        // left: 0;
+        // z-index: -1;
+    }
+    @keyframes move-bg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        /* O valor aqui deve ser múltiplo do background-size para o loop ser perfeito */
+        background-position: 0 -500px; 
+    }
+    }
+    .login-area
+    {
+        width: 75%;
+        // height: 100px;
+        border-radius: 19px;
+        padding: 20px;
+        background-color: white;
+        margin: auto;
+        position: absolute;
+        left: 7%;
+        right: 7%;
+        form
+        {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            label
+            {
+                font-size: 2em;
+                font-weight: bold;
+                font-style: italic;
+            }
+            input
+            {
+                font-size: 1.5em;
+                border: 1px solid;
+                outline: none;
+                border-radius: 50px;
+                text-align: center;
+                font-weight: 100;
+            }
+            .btns_login
+            {
+                display: flex;
+                justify-content: space-between;
+                button
+                {
+                    // width: 30%;
+                    margin: auto;
+                    padding: 3px;
+                    background-color: white;
+                    border: none;
+                    outline: none;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+}
+// .login_main {
+//   /* Cor de fundo azul */
+//   background-color: #007bff; 
+  
+//   /* Criamos o texto via SVG no background para evitar centenas de tags HTML */
+//   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='40' viewBox='0 0 200 40'%3E%3Ctext x='0' y='30' fill='rgba(255,255,255,0.2)' font-family='Arial' font-weight='bold' font-style='italic' font-size='20'%3EBikOrder%3C/text%3E%3C/svg%3E");
+  
+//   /* Faz o texto repetir em grade */
+//   background-repeat: repeat;
+  
+//   /* Inclina o fundo inteiro */
+//   transform: rotate(-15.5deg) scale(1.5);
+  
+//   /* Define o tamanho de cada "celula" do texto */
+//   background-size: 200px 40px;
+  
+//   /* Animação */
+//   animation: move-bg 10s linear infinite;
+  
+//   /* Ajustes de layout */
+//   width: 100%;
+//   height: 100vh;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+// }
+
+// @keyframes move-bg {
+//   from {
+//     background-position: 0 0;
+//   }
+//   to {
+//     /* O valor aqui deve ser múltiplo do background-size para o loop ser perfeito */
+//     background-position: 0 -400px; 
+//   }
+// }
