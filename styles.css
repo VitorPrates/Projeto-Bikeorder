@@ -50,6 +50,7 @@ body {
   height: 200px;
   text-wrap: initial;
   left: 100px;
+  bottom: 20px;
   transform: rotateZ(20deg);
   word-break: break-all;
   overflow: hidden;
@@ -160,4 +161,92 @@ body {
   font-weight: bold;
   font-style: italic;
   font-size: 1.1em;
+}
+
+.cadastro-footer a {
+  color: black;
+  position: absolute;
+  bottom: 6%;
+  left: 30px;
+  background-color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.main-cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-cadastro .remover-bike, .main-cadastro .adicionar-bike {
+  width: 85%;
+  height: 45%;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: auto;
+}
+.main-cadastro h3 {
+  font-size: 2em;
+  text-align: center;
+}
+.main-cadastro hr {
+  width: 40%;
+  margin: 10px auto 0px auto;
+  border: 1px solid black;
+}
+.main-cadastro .form-add-bike {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+.main-cadastro .form-add-bike label {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px 0px -5px 0px;
+}
+.main-cadastro .form-add-bike select {
+  width: 80%;
+  margin: 0px auto;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 100;
+  border-radius: 10px;
+  background-color: white;
+}
+.main-cadastro .form-add-bike button {
+  margin: 10px auto;
+  background-color: #00FF90;
+  padding: 5px 10px;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid;
+  font-size: 1.1em;
+  width: 65%;
+}
+.main-cadastro .form-add-bike input {
+  width: 85%;
+  margin: 0px auto;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 100;
+  border-radius: 10px;
+  background-color: white;
+  outline: none;
+  border: 1px solid;
+}
+.main-cadastro .form-remov-bike p {
+  align-self: baseline;
+  margin: 0px 0px 0px 20px;
+}
+.main-cadastro .form-remov-bike button {
+  background-color: #FF8383;
 }/*# sourceMappingURL=styles.css.map */
